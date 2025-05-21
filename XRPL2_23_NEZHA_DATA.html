@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Buku Novel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(
+        100deg,
+        #ff0000 0%,
+        #8B0000 45%,
+        #0011ff 55%,
+        #0011ff 100%
+      );
+      color: #f1f1f1;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 50px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        transparent 0px,
+        rgba(255, 255, 255, 0.015) 1px,
+        transparent 2px
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px 30px;
+      z-index: 2;
+      position: relative;
+    }
+
+    img.profile {
+      border-radius: 50%;
+      border: 4px solid #ff003c;
+      box-shadow: 0 0 15px #ff003c, 0 0 25px #00ffff;
+      width: 150px;
+      height: 150px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img.profile:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #ff003c, 0 0 45px #00ffff;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-top: 15px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #ff003c;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00ffff;
+      margin: 0 8px;
+      text-shadow: 0 0 5px #00ffff;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #ff003c;
+      text-shadow: 0 0 10px #ff003c;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 28px;
+      color: #ff003c;
+      text-shadow: 0 0 10px #ff003c, 0 0 20px #00ffff;
+    }
+
+    .book-table, .detail-table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .book-table th, .book-table td, .detail-table td {
+      border: 1px solid #00ffff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .book-table th {
+      background-color: #ff003c;
+      color: #fff;
+    }
+
+    .book-table td img {
+      width: 100px;
+      height: auto;
+      border: 2px solid #ff003c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book-table td img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff003c, 0 0 30px #00ffff;
+    }
+
+    .detail-table td {
+      vertical-align: top;
+      padding: 15px;
+    }
+
+    .detail-table img {
+      width: 150px;
+      height: auto;
+      border: 2px solid #ff003c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .detail-table img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff003c, 0 0 30px #00ffff;
+    }
+
+    .back-to-top {
+      display: block;
+      margin-top: 10px;
+      color: #00ffff;
+    }
+
+    .back-to-top:hover {
+      color: #ff003c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="FOTO PROFIL.jpeg" alt="Foto Profil" class="profile">
+    <h1>NEZHA MAULANA EMERALDO</h1>
+    <p><i><b>Keep going against current, only trash and dead fish keep going with the current.</b></i></p>
+    <p>
+      <a href="XRPL2_23_NEZHA_PROFILE.html">Profile</a> |
+      <a href="XRPL2_23_NEZHA_GALLERY.html">Gallery</a> |
+      Data
+    </p>
+  </div>
+
+  <h2 id="TOP">Daftar Buku Novel</h2>
+
+  <table class="book-table">
+    <tr>
+      <th>Judul Buku</th>
+      <th>Pengarang</th>
+      <th>Foto</th>
+      <th>Detail</th>
+    </tr>
+    <tr>
+      <td>Aku Tak Membenci Hujan</td>
+      <td>Sri Puji Hartini</td>
+      <td><img src="data1.jpg" alt="Cover Buku 1"></td>
+      <td><a href="#book1">Detail</a></td>
+    </tr>
+    <tr>
+      <td>Perahu Kertas</td>
+      <td>Dewi Lestari</td>
+      <td><img src="data2.jpg" alt="Cover Buku 2"></td>
+      <td><a href="#book2">Detail</a></td>
+    </tr>
+    <tr>
+      <td>Laskar Pelangi</td>
+      <td>Andrea Hirata</td>
+      <td><img src="data3.jpg" alt="Cover Buku 3"></td>
+      <td><a href="#book3">Detail</a></td>
+    </tr>
+    <tr>
+      <td>Negeri 5 Menara</td>
+      <td>Ahmad Fuadi</td>
+      <td><img src="data4.jpg" alt="Cover Buku 4"></td>
+      <td><a href="#book4">Detail</a></td>
+    </tr>
+    <tr>
+      <td>Ayat-Ayat Cinta</td>
+      <td>Habiburrahman El Shirazy</td>
+      <td><img src="data5.jpg" alt="Cover Buku 5"></td>
+      <td><a href="#book5">Detail</a></td>
+    </tr>
+  </table>
+
+  <h2>Detail Buku Novel</h2>
+
+  <table class="detail-table">
+    <tr>
+      <td><img src="data1.jpg" alt="Cover Aku Tak Membenci Hujan"></td>
+      <td>
+        <strong><a name="book1">Aku Tak Membenci Hujan</a></strong><br>
+        Pengarang: Sri Puji Hartini<br>
+        Sinopsis: Mengisahkan tentang seorang Karang yang memiliki kepribadian ganda dan perjuangannya dalam menghadapi konflik batin serta penerimaan diri.<br>
+        <a href="#TOP" class="back-to-top">Kembali ke atas</a>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="data2.jpg" alt="Cover Perahu Kertas"></td>
+      <td>
+        <strong><a name="book2">Perahu Kertas</a></strong><br>
+        Pengarang: Dewi Lestari<br>
+        Sinopsis: Kisah cinta antara Kugy dan Keenan yang penuh liku, diwarnai dengan impian dan realita kehidupan yang harus mereka hadapi bersama.<br>
+        <a href="#TOP" class="back-to-top">Kembali ke atas</a>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="data3.jpg" alt="Cover Laskar Pelangi"></td>
+      <td>
+        <strong><a name="book3">Laskar Pelangi</a></strong><br>
+        Pengarang: Andrea Hirata<br>
+        Sinopsis: Cerita inspiratif tentang sekelompok anak-anak dari Belitung yang berjuang untuk mendapatkan pendidikan di tengah keterbatasan.<br>
+        <a href="#TOP" class="back-to-top">Kembali ke atas</a>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="data4.jpg" alt="Cover Negeri 5 Menara"></td>
+      <td>
+        <strong><a name="book4">Negeri 5 Menara</a></strong><br>
+        Pengarang: Ahmad Fuadi<br>
+        Sinopsis: Perjalanan enam santri di Pondok Madani yang penuh semangat dan mimpi besar untuk menaklukkan dunia.<br>
+        <a href="#TOP" class="back-to-top">Kembali ke atas</a>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="data5.jpg" alt="Cover Ayat-Ayat Cinta"></td>
+      <td>
+        <strong><a name
+::contentReference[oaicite:8]{index=8}
+ 
